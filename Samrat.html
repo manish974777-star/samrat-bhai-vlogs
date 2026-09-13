@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samrat Bhai Vlogs - Official Portfolio</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: #121212; color: #fff; scroll-behavior: smooth; }
+
+        /* Header & Navbar - Left corner logo */
+        header { background: #1a1a1a; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+        .brand-logo { font-size: 22px; font-weight: 800; color: #ff0055; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .brand-logo span { color: #fff; }
+
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav ul li a { color: #ddd; text-decoration: none; font-size: 15px; font-weight: 500; transition: 0.3s; }
+        nav ul li a:hover { color: #ff0055; }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://i.ibb.co/zVxRj9P1/Instagram-1789293503980-JPG.jpg') no-repeat center center/cover; padding: 120px 20px; text-align: center; }
+        .hero h1 { font-size: 45px; font-weight: 800; margin-bottom: 10px; color: #fff; }
+        .hero h1 span { color: #ff0055; }
+        .hero p { font-size: 18px; color: #ddd; max-width: 600px; margin: 0 auto 30px; }
+        
+        .social-btns { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; }
+        .social-btn { background: #ff0055; color: #fff; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: 0.3s; }
+        .social-btn:hover { background: #e0004c; transform: translateY(-3px); }
+
+        /* Section Common */
+        .section { padding: 80px 5%; max-width: 1200px; margin: auto; }
+        .section-title { text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 50px; color: #fff; position: relative; }
+        .section-title span { color: #ff0055; }
+        .section-title::after { content: ''; width: 50px; height: 3px; background: #ff0055; display: block; margin: 10px auto 0; }
+
+        /* About Section */
+        .about-grid { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+        .about-text { flex: 1; min-width: 300px; }
+        .about-text h3 { font-size: 26px; margin-bottom: 15px; color: #ff0055; }
+        .about-text p { font-size: 15px; color: #bbb; line-height: 1.7; margin-bottom: 15px; }
+        .about-img { flex: 1; min-width: 300px; text-align: center; }
+        .about-img img { width: 100%; max-width: 350px; border-radius: 15px; border: 3px solid #ff0055; box-shadow: 0 5px 20px rgba(255, 0, 85, 0.3); }
+
+        /* Vlogs / Gallery Section */
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .card { background: #1e1e1e; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.3s; border: 1px solid #333; }
+        .card:hover { transform: translateY(-5px); border-color: #ff0055; }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card-body { padding: 20px; }
+        .card-title { font-size: 18px; font-weight: 600; margin-bottom: 10px; color: #fff; }
+        .card-text { font-size: 14px; color: #aaa; margin-bottom: 15px; }
+
+        /* Contact Section */
+        .contact-box { background: #1a1a1a; border-radius: 10px; padding: 40px; border: 1px solid #333; text-align: center; max-width: 700px; margin: auto; }
+        .contact-box h3 { color: #ff0055; font-size: 24px; margin-bottom: 15px; }
+        .contact-box p { color: #aaa; font-size: 15px; margin-bottom: 20px; }
+        .contact-info { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; font-size: 16px; color: #ddd; }
+        .contact-info p { display: flex; align-items: center; gap: 8px; }
+        .contact-info i { color: #ff0055; }
+
+        /* Footer */
+        footer { background: #0a0a0a; color: #777; text-align: center; padding: 20px; font-size: 13px; border-top: 1px solid #222; }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            nav ul { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <a href="#home" class="brand-logo">
+            <i class="fas fa-video"></i> Samrat bhaii<span>ki duniya</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#vlogs">Latest Vlogs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Welcome to <span>Samrat Bhai Vlogs</span></h1>
+        <p>Catch the best daily vlogs, lifestyle moments, and exciting adventures right here!</p>
+        
+        <div class="social-btns">
+            <a href="https://www.instagram.com/___samratthakur___" target="_blank" class="social-btn"><i class="fab fa-instagram"></i> Follow Instagram</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <h2 class="section-title">About <span>Samrat Bhai</span></h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <h3>Creator & Vlogger</h3>
+                <p>नमस्कार दोस्तों! मैं हूँ सम्राट भाई। मेरे इस चैनल और पोर्टफोलियो पर आपको मेरी डेली लाइफ, फनी मोमेंट्स, ट्रैवल व्लॉग्स और बहुत कुछ देखने को मिलेगा।</p>
+                <p>मेरा मकसद आप सभी का मनोरंजन करना और अपनी हर नई यात्रा में आपको साथ रखना है। जुड़िए हमारे साथ और देखिए बेहतरीन कंटेंट!</p>
+            </div>
+            <div class="about-img">
+                <img src="https://i.ibb.co/kV70Lm2N/Instagram-1789293503976-JPG.jpg" alt="Samrat Bhai">
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Vlogs Section -->
+    <section class="section" id="vlogs" style="background: #171717;">
+        <h2 class="section-title">Latest <span>Vlogs</span></h2>
+        <div class="grid-container">
+            <!-- Vlog 1 - ScreenPal Embedded Player -->
+            <div class="card">
+                <div class="sp-embed-player" data-id="cOQI6rnwJq7" data-aspect-ratio="0.562500" data-padding-top="177.777778%" style="position:relative;width:100%;padding-top:177.777778%;height:0;">
+                    <script src="https://go.screenpal.com/player/appearance/cOQI6rnwJq7"></script>
+                    <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" scrolling="no" src="https://go.screenpal.com/player/cOQI6rnwJq7?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="fullscreen *;" allowfullscreen></iframe>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">सम्राट भाई का लेटेस्ट व्लॉग 1</div>
+                    <p class="card-text">देखें और एन्जॉय करें !</p>
+                </div>
+            </div>
+
+            <!-- Vlog 2 - New ScreenPal Embedded Player -->
+            <div class="card">
+                <div class="sp-embed-player" data-id="cOQI6xnwJYl" data-aspect-ratio="0.562500" data-padding-top="177.777778%" style="position:relative;width:100%;padding-top:177.777778%;height:0;">
+                    <script src="https://go.screenpal.com/player/appearance/cOQI6xnwJYl"></script>
+                    <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" scrolling="no" src="https://go.screenpal.com/player/cOQI6xnwJYl?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="fullscreen *;" allowfullscreen></iframe>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">sona bhaii ki altrozz</div>
+                    <p class="card-text"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="contact-box">
+            <h3>Get In Touch</h3>
+            <p>कोलैबोरेशन (Collaboration) या बिजनेस इंक्वायरी के लिए आप संपर्क कर सकते हैं:</p>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> contact@samratbhaivlogs.com</p>
+                <p><i class="fas fa-phone"></i> +91 90585 11390</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Samrat Bhai Vlogs. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
